@@ -4,15 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pratham Pannaliya | Personal Website</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #fdfdfd; }
-    header { background-color: #222; color: white; padding: 20px; text-align: center; }
-    nav { background-color: #444; text-align: center; }
-    nav a { color: white; text-decoration: none; padding: 14px 20px; display: inline-block; }
-    nav a:hover { background-color: #333; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
 
-    /* Horizontal scroll images */
+  <style>
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f8fafc, #eef2ff);
+    }
+
+    header {
+      background: linear-gradient(135deg, #111, #333);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      opacity: 0.8;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: #222;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #444;
+    }
+
+    section {
+      max-width: 950px;
+      margin: 30px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    /* Image gallery */
     .image-scroll {
       display: flex;
       overflow-x: auto;
@@ -21,18 +73,52 @@
     }
 
     .image-scroll img {
-      height: 200px;
+      height: 220px;
       border-radius: 12px;
+      transition: transform 0.3s;
       flex-shrink: 0;
     }
 
-    footer { background-color: #222; color: white; text-align: center; padding: 20px; }
+    .image-scroll img:hover {
+      transform: scale(1.08);
+    }
+
+    /* Social links */
+    .social a {
+      display: inline-block;
+      margin: 8px 10px;
+      padding: 10px 15px;
+      background: #111;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .social a:hover {
+      background: #555;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .image-scroll img { height: 160px; }
+    }
   </style>
 </head>
+
 <body>
 
   <header>
     <h1>Pratham Pannaliya</h1>
+    <p>Building discipline, curiosity & a better future 🚀</p>
   </header>
 
   <nav>
@@ -49,10 +135,10 @@
     <p>Hello and welcome to my personal space on the internet. I'm Pratham, currently on a journey of learning and self-growth!</p>
 
     <div class="image-scroll">
-      <img src="photo1.jpg" alt="Photo 1">
-      <img src="photo2.jpg" alt="Photo 2">
-      <img src="photo3.jpg" alt="Photo 3">
-      <img src="photo4.jpg" alt="Photo 4">
+      <img src="photo1.jpg">
+      <img src="photo2.jpg">
+      <img src="photo3.jpg">
+      <img src="photo4.jpg">
     </div>
   </section>
 
@@ -83,11 +169,13 @@
 
   <section id="follow">
     <h2>Follow Me</h2>
-    <p><a href="https://www.instagram.com/aether.pratham" target="_blank">Instagram</a></p>
-    <p><a href="https://x.com/pratham_1319" target="_blank">X (Twitter)</a></p>
-    <p><a href="https://www.reddit.com/user/pratham_pannaliya/" target="_blank">Reddit</a></p>
-    <p><a href="https://www.linkedin.com/in/pratham-pannaliya-0677933b8" target="_blank">LinkedIn</a></p>
-    <p><a href="https://t.me/thisispratham" target="_blank">Telegram</a></p>
+    <div class="social">
+      <a href="https://www.instagram.com/aether.pratham" target="_blank">Instagram</a>
+      <a href="https://x.com/pratham_1319" target="_blank">X</a>
+      <a href="https://www.reddit.com/user/pratham_pannaliya/" target="_blank">Reddit</a>
+      <a href="https://www.linkedin.com/in/pratham-pannaliya-0677933b8" target="_blank">LinkedIn</a>
+      <a href="https://t.me/thisispratham" target="_blank">Telegram</a>
+    </div>
   </section>
 
   <section id="contact">
@@ -107,7 +195,7 @@
     </ul>
 
     <p><strong>Address:</strong><br>
-      Ansal Township, Talawali Chanda, AB Road, Indore, Madhya Pradesh – 453771
+      Bhanpura, District Mandsaur, Madhya Pradesh – 458775
     </p>
   </section>
 
