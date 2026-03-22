@@ -15,7 +15,6 @@
       transition: background 0.4s, color 0.4s;
     }
 
-    /* Dark mode */
     body.dark {
       background: #0f172a;
       color: #e2e8f0;
@@ -52,10 +51,7 @@
       text-decoration: none;
       padding: 14px 20px;
       display: inline-block;
-      transition: 0.3s;
     }
-
-    nav a:hover { background-color: #444; }
 
     section {
       max-width: 950px;
@@ -64,36 +60,43 @@
       background: white;
       border-radius: 18px;
       box-shadow: 0 6px 25px rgba(0,0,0,0.08);
-      transition: 0.4s;
     }
 
     body.dark section {
       background: #1e293b;
     }
 
-    /* Typing */
-    #typing {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      opacity: 0.9;
+    /* Netflix-style slider */
+    .slider {
+      overflow: hidden;
+      position: relative;
     }
 
-    /* Image gallery */
-    .image-scroll {
+    .slider-track {
       display: flex;
-      overflow-x: auto;
-      gap: 15px;
-      padding: 10px 0;
+      width: calc(250px * 12);
+      animation: scroll 20s linear infinite;
     }
 
-    .image-scroll img {
-      height: 220px;
+    .slide {
+      width: 250px;
+      margin-right: 15px;
+    }
+
+    .slide img {
+      width: 100%;
       border-radius: 12px;
       transition: transform 0.3s;
-      flex-shrink: 0;
     }
 
-    .image-scroll img:hover { transform: scale(1.08); }
+    .slide img:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
 
     /* Social */
     .social a {
@@ -104,21 +107,13 @@
       color: white;
       border-radius: 8px;
       text-decoration: none;
-      transition: 0.3s;
     }
-
-    .social a:hover { background: #555; }
 
     footer {
       background: #111;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 30px;
-    }
-
-    @media (max-width: 600px) {
-      .image-scroll img { height: 160px; }
     }
   </style>
 </head>
@@ -144,87 +139,67 @@
     <h2>Welcome!</h2>
     <p>Hello and welcome to my personal space on the internet. I'm Pratham, currently on a journey of learning and self-growth!</p>
 
-    <div class="image-scroll">
-      <img src="photo1.jpg">
-      <img src="photo2.jpg">
-      <img src="photo3.jpg">
-      <img src="photo4.jpg">
-      <img src="photo5.jpg">
-      <img src="photo6.jpg">
+    <div class="slider">
+      <div class="slider-track">
+        <div class="slide"><img src="photo1.jpg"></div>
+        <div class="slide"><img src="photo2.jpg"></div>
+        <div class="slide"><img src="photo3.jpg"></div>
+        <div class="slide"><img src="photo4.jpg"></div>
+        <div class="slide"><img src="photo5.jpg"></div>
+        <div class="slide"><img src="photo6.jpg"></div>
+
+        <!-- duplicate for infinite loop -->
+        <div class="slide"><img src="photo1.jpg"></div>
+        <div class="slide"><img src="photo2.jpg"></div>
+        <div class="slide"><img src="photo3.jpg"></div>
+        <div class="slide"><img src="photo4.jpg"></div>
+        <div class="slide"><img src="photo5.jpg"></div>
+        <div class="slide"><img src="photo6.jpg"></div>
+      </div>
     </div>
   </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hi, I’m Pratham Pannaliya, from Bhanpura, a town in Mandsaur district, Madhya Pradesh and currently living in Indore, Madhya Pradesh. I’m 17 years old.<br><br>
-
-    My family is my biggest support; my father, Jitendra Pannaliya, is a salesman in ITC Limited and my mother, Basanti Pannaliya, is a teacher at Saraswati Vidhya Mandir Bhanpura.</p>
+    <p>Hi, I’m Pratham Pannaliya...</p>
   </section>
 
   <section id="academic">
     <h2>Academic Journey</h2>
-    <p>I'm currently enrolled in Sanskar Valley Higher Secondary School, Garoth for Board studies. My class 12th board exams are completed. I'm a student of PCB stream. Biology and English are my favourite subjects.<br><br>
-
-    I have studied in Nahar Public School (till class 8th), Govt. Model HS School (class 9th), and Saraswati Vidhya Mandir (class 10th) before it.<br><br>
-
-    I have scored 95.8% in class 10th boards and secured 1st rank in Mandsaur district. I'm also honored with a gold medal by the district collector for that achievement.<br><br>
-
-    I have also given olympiad exams like ISO and IGKO and other exams like JNVST, MP Modal School Entrance Exam, NSTSE, NSE, AIMSET etc.</p>
+    <p>...</p>
   </section>
 
   <section id="hobbies">
     <h2>Interests & Hobbies</h2>
-    <p>I love listening to music, reading different types of books, reading poetry etc.<br><br>
-
-    My interests include philosophy, AI, tech, data analysis, literature, music, science etc.</p>
+    <p>...</p>
   </section>
 
   <section id="follow">
     <h2>Follow Me</h2>
     <div class="social">
-      <a href="https://www.instagram.com/aether.pratham" target="_blank">Instagram</a>
-      <a href="https://x.com/pratham_1319" target="_blank">X</a>
-      <a href="https://www.reddit.com/user/pratham_pannaliya/" target="_blank">Reddit</a>
-      <a href="https://www.linkedin.com/in/pratham-pannaliya-0677933b8" target="_blank">LinkedIn</a>
-      <a href="https://t.me/thisispratham" target="_blank">Telegram</a>
+      <a href="#">Instagram</a>
+      <a href="#">X</a>
+      <a href="#">Reddit</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Telegram</a>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-
-    <p><strong>Phone Numbers:</strong></p>
-    <ul>
-      <li>+919201379588</li>
-      <li>+917389542192</li>
-      <li>+919753624659</li>
-    </ul>
-
-    <p><strong>Email:</strong></p>
-    <ul>
-      <li><a href="mailto:pratham.officialone@gmail.com">pratham.officialone@gmail.com</a></li>
-      <li><a href="mailto:pratham.pannaliya@icloud.com">pratham.pannaliya@icloud.com</a></li>
-    </ul>
-
-    <p><strong>Address:</strong><br>
-      Bhanpura, District Mandsaur, Madhya Pradesh – 458775
-    </p>
   </section>
 
   <footer>
-    <p>&copy; 2026 Pratham Pannaliya. All rights reserved.</p>
+    <p>&copy; 2026 Pratham Pannaliya</p>
   </footer>
 
   <script>
-    // Dark mode toggle
     function toggleDarkMode() {
       document.body.classList.toggle("dark");
     }
 
-    // Typing animation
     const text = "";
     let i = 0;
-
     function typing() {
       if (i < text.length) {
         document.getElementById("typing").innerHTML += text.charAt(i);
@@ -232,7 +207,6 @@
         setTimeout(typing, 40);
       }
     }
-
     typing();
   </script>
 
